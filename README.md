@@ -1,18 +1,18 @@
-# Machine Learning Interatomic Potential for Liquid Na-K Alloy Systems
+# Machine Learning Interatomic Potential for Liquid Na-K Systems
 
-This repository contains a machine learning interatomic potential (MLP) model trained for liquid sodium-potassium (Na-K) alloy systems. The model is designed for molecular dynamics simulations of liquid metal systems.
+This repository contains a machine learning interatomic potential (MLP) model trained for liquid sodium-potassium (Na-K) alloy systems,including pure sodium, pure potassium, and sodium-potassium alloys. The model is designed for molecular dynamics simulations of liquid metal systems.
 
 ## Repository Structure
 
 ### 📁 `pre_training`  
 Contains files related to the pre-training phase:  
-- Input parameter configuration files  
+- Input parameter configuration file  
 - Training dataset  
 - Pre-trained model files  
 
 ### 📁 `simplify`  
 Files for the simplify transfer learning and optimization phase:  
-- Transfer learning input parameter files  
+- Transfer learning input parameter file  
 - Training dataset  
 - Validation dataset  
 - Test dataset  
