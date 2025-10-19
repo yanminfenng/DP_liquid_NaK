@@ -1,0 +1,92 @@
+{
+     "type_map": ["Na","K"],
+     "mass_map": [22.99,39.098],
+     "init_data_prefix": "",
+     "init_data_sys": [],
+     "sys_configs":[],
+     "pick_data":  "/collect_data/path",
+     "sys_batch_size": ["auto"],
+     "training_iter0_model_path": ["pre_train/model/path/00[0-3]"], 
+     "training_init_model": true,
+     "_comment": " that's all ",
+
+     "numb_models": 4,
+     "_train_param": "input.json",
+     "default_training_param": {
+         "model": {
+             "type_map": ["Na","K"],
+             "descriptor": {
+                 "type": "se_e2_a",
+                 "sel": [135,135],                
+                 "rcut_smth": 0.5,
+                 "rcut": 8.0,
+                 "neuron": [25,50,100],
+		 "trainable": false,
+                 "resnet_dt": false,
+                 "axis_neuron": 12,
+                 "seed": 1
+				 
+             },
+             "fitting_net": {
+                 "neuron": [240,240,240],
+                 "resnet_dt": true,
+		 "trainable": [false, false, false, true],
+                 "seed": 1
+             }
+         },
+         "learning_rate": {
+             "type": "exp",
+             "start_lr": 0.001,
+             "decay_steps": 5000,
+	     "_decay_steps": 500
+         },
+         "loss": {
+             "start_pref_e": 100,
+             "limit_pref_e": 100,
+             "start_pref_f": 1,
+             "limit_pref_f": 0.9,
+             "limit_pref_v": 1
+         },
+         "training": {
+             "_systems": [],
+             "_stop_batch": 400000,
+	     "numb_steps": 1000000,
+             "disp_file": "lcurve.out",
+             "disp_freq": 1000,
+             "numb_test": 1,
+             "save_freq": 10000,
+             "save_ckpt": "model.ckpt",
+             "_load_ckpt": "model.ckpt",
+             "disp_training": true,
+             "time_training": true,
+             "profiling": false,
+             "profiling_file": "timeline.json",
+             "_comment": "that's all"
+         }
+     },
+     
+
+    "fp_style": "vasp",
+    "fp_skip_bad_box": "length_ratio:5;height_ratio:5",
+    "_shuffle_poscar": false,
+    "fp_task_max": 100,
+    "_fp_task_max": 50,
+    "fp_task_min": 0,
+    "_fp_task_min": 20,
+    "ratio_failed":0.3,
+    "fp_pp_path": "../vasp_potential",
+    "fp_pp_files": ["POTCAR_Na_pv","POTCAR_K_pv"],   
+    "fp_incar":"/INCAR_NaK/path",
+	
+    "_use_clusters": false,
+    "labeled": false,
+    "init_pick_number":100,
+    "iter_pick_number":100,
+    "model_devi_e_trust_lo":1e10,
+    "model_devi_e_trust_hi":1e10,
+    "model_devi_f_trust_lo":0.10,
+    "model_devi_f_trust_hi":100.00,
+    "_comment": "that's all"
+}
+
+
