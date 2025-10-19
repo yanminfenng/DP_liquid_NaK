@@ -1,0 +1,22 @@
+WARNING:tensorflow:From /home/fym/anaconda3/envs/dpmd/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:root:To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, TF_INTRA_OP_PARALLELISM_THREADS, and TF_INTER_OP_PARALLELISM_THREADS. See https://deepmd.rtfd.io/parallelism/ for more information.
+WARNING:root:Environment variable KMP_BLOCKTIME is empty. Use the default value 0
+WARNING:root:Environment variable KMP_AFFINITY is empty. Use the default value granularity=fine,verbose,compact,1,0
+/home/fym/anaconda3/envs/dpmd/lib/python3.10/importlib/__init__.py:169: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  _bootstrap._exec(spec, module)
+DEEPMD INFO    # ---------------output of dp test--------------- 
+DEEPMD INFO    # testing system : sys.Na128K0
+DEEPMD INFO    # number of test data : 20 
+DEEPMD INFO    Energy MAE         : 2.219930e-01 eV
+DEEPMD INFO    Energy RMSE        : 2.552668e-01 eV
+DEEPMD INFO    Energy MAE/Natoms  : 1.734320e-03 eV
+DEEPMD INFO    Energy RMSE/Natoms : 1.994272e-03 eV
+DEEPMD INFO    Force  MAE         : 8.176707e-03 eV/A
+DEEPMD INFO    Force  RMSE        : 1.069931e-02 eV/A
+DEEPMD INFO    Virial MAE         : 3.476150e-01 eV
+DEEPMD INFO    Virial RMSE        : 5.178375e-01 eV
+DEEPMD INFO    Virial MAE/Natoms  : 2.715742e-03 eV
+DEEPMD INFO    Virial RMSE/Natoms : 4.045605e-03 eV
+DEEPMD INFO    # ----------------------------------------------- 
